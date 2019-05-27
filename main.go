@@ -21,9 +21,25 @@ func bubbleSort(arr []int) []int {
 	return arr
 }
 
+func selectionSort(arr []int) []int {
+	var smallest int
+	for i, v := range arr {
+		smallest = v
+		for j := i; j < len(arr); j++ {
+			if arr[j] < smallest {
+				smallest, arr[j] = arr[j], smallest
+			}
+		}
+		arr[i] = smallest
+	}
+	return arr
+}
+
 func main() {
 	arr := []int{10, 1, 20, 4, 2, 9, 5, 7, 6} // your array
-	arr = bubbleSort(arr)
+	selection := selectionSort(arr)
+	bubble := bubbleSort(arr)
 
-	fmt.Println(arr)
+	fmt.Printf("Selection sort: %d\n", selection)
+	fmt.Printf("Bubble sort: %d\n", bubble)
 }
