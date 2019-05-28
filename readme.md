@@ -1,1 +1,1 @@
-# Implementation of bubble sort & selection sort with GoLang
+# Implementation of bubble, selection & insertion sort with GoLang
